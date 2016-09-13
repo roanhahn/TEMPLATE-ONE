@@ -1,0 +1,233 @@
+
+.border-top, .border-right, .border-bottom, .border-left{
+	position: fixed;
+	z-index: 1;
+	background-color: #fff;
+	display: block;
+	content: "";
+}
+.border-left{
+	left: 0px;
+	bottom: 0px;
+	width: 20px;
+	height: 100%;
+
+	@media all and (max-width: $breakpoint-mobile){
+		width: 10px;
+	}
+}
+.border-right{
+	right: 0px;
+	bottom: 0px;
+	width: 20px;
+	height: 100%;
+
+	@media all and (max-width: $breakpoint-mobile){
+		width: 10px;
+	}
+}
+.border-top{
+	left: 0px;
+	width: 100%;
+	height: 20px;
+
+	@media all and (max-width: $breakpoint-mobile){
+		height: 10px;
+	}
+}
+
+.border-bottom{
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 20px;
+
+	@media all and (max-width: $breakpoint-mobile){
+		height: 10px;
+	}
+}
+
+.hero{
+	background-color: #f6f6f6;
+	background: #fff url("http://blog.gessato.com/wp-content/uploads/2013/02/minimal-float-wall-desk-by-orange-22-design-lab-2.jpg") no-repeat top center fixed;
+	background: #fff url("../img/hero-mountains.jpg") no-repeat center center fixed;
+	
+	background-size: cover;
+	// color: #fff;
+	height: 100%;
+	min-height: 600px;
+	padding: 0;
+	position: relative;
+	// @include borders(#fff, 14px 14px 0);
+
+	@media all and (max-width: $breakpoint-tablet){
+		height: 61%;
+		min-height: 0px;
+		background-attachment: scroll;
+	}
+
+	@media all and (max-width: $breakpoint-mobile){
+		height: 100%;
+		min-height: 0px;
+	}
+
+	&:before{
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		content: "";
+		@include linear-gradient(45deg, #fff, #f6f6f6);
+		background-color: #f6f6f6;
+		opacity: .8;
+	}
+	
+
+	& h1{
+		font-family: $primary-font;
+		font-weight: 700;
+		font-size: 120px;
+		line-height: 1;
+		color: $heading-color;
+		text-transform: uppercase;
+		margin: 0 0 10px 0;
+		padding: 0;
+		letter-spacing: 0px;
+
+		@media all and (max-width: $breakpoint-tablet){
+			font-size: 60px;
+		}
+
+		@media all and (max-width: $breakpoint-mobile){
+			font-size: 30px;
+		}
+	}
+
+	& h2{
+		font-family: $secondary-font;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 1.5;
+		margin: 0 0 50px;
+		padding: 0;
+		letter-spacing: 0px;
+		color: $heading-color;
+
+		@media all and (max-width: $breakpoint-tablet){
+			font-size: 24px;
+		}
+
+		@media all and (max-width: $breakpoint-mobile){
+			font-size: 13px;
+		}
+	}
+
+	& small{
+		display: block;
+		color: #fff;
+	}
+
+	& .learn-more{
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		width: 40px;
+		height: 60px;
+		cursor: pointer;
+		background-color: red;
+		
+		-ms-transform: translate(-50%, 0);
+		-webkit-transform: translate(-50%, 0);
+		transform: translate(-50%, 0);
+		text-transform: uppercase;
+		font: normal 700 10px/1 'Istok Web', serif;
+		letter-spacing: 1px;
+		cursor: pointer;
+
+		&-arrow{
+			width: 40px;
+			height: 60px;
+			position: absolute;
+			bottom: 30px;
+			left: calc(50% - 20px);
+			background: transparent url(../img/icon-arrow-down.svg) no-repeat center top scroll;
+			background-size: 40px;
+			cursor: pointer;
+			
+			-webkit-transition: all 0.3s ease-in-out 0s;
+			-moz-transition: all 0.3s ease-in-out 0s;
+			-o-transition: all 0.3s ease-in-out 0s;
+			transition: all 0.3s ease-in-out 0s;
+
+			@media all and (max-width: $breakpoint-mobile){
+				background-size: 20px;
+				width: 30px;
+				height: 40px;
+				left: calc(50% - 15px);
+				bottom: 20px;
+			}
+
+			&:hover{
+				background-position: center bottom;
+			}
+		}
+
+		&:hover .learn-more-arrow{
+			background-position: center bottom;
+		}
+	}
+}
+
+.section{
+	position: relative;
+	
+}
+
+.background_cycler {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+.background_cycler div {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1; 
+}
+
+.background_cycler .slide-1 {
+	background-image: url(../img/hero-1.png);
+	background-color: green;
+}
+.background_cycler .slide-2 {
+	background-image: url(../img/hero-2.png);
+	background-color: blue;
+}
+.background_cycler .slide-3 {
+	background-image: url(../img/hero-3.png);
+	background-color: pink;
+}
+.background_cycler div.active {
+	z-index: 3;
+}
+
+.centered{
+	width: 100%;
+	position: absolute; 
+	top: 50%;
+	-ms-transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}

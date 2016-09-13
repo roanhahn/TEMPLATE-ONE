@@ -1,0 +1,38 @@
+html{
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+html,body{
+	height: 100%;
+	position: relative;
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body{
+	cursor: default;
+}
+
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	outline: none !important;
+}
+
+h1,h2,h3,h4,small,p,ul,li,video, figure, figcaption{
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	padding-bottom: 0px;
+}
+
+a, a:visited, a:active{
+	text-decoration: none;
+}
+
+/* [data-sr] { 
+	visibility: hidden; 
+} */
+

@@ -1,0 +1,119 @@
+body, html{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	cursor: default;
+	background: #fff;
+	font-weight: 400;
+	font-size: 16px;
+	font-family: $font-2;
+	color: $color-2;
+	height: 100%;
+	background: $section-color;
+	-webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+	position: relative;
+}
+
+a, a:active, a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+a{
+	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
+	-o-transition: all .2s ease-in-out 0s;
+	transition: all .2s ease-in-out 0s;
+
+	&:hover{
+		text-decoration: none;
+		color: $color-1;
+	}
+
+	color: $color-1;
+}
+
+
+
+.h2{
+	font-family: $font-1;
+	color: $color-2;
+	font-weight: 700;
+	font-size: 36px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+
+	& small{
+		display: block;
+		font-family: $font-2;
+		color: $color-1;
+		text-transform: none;
+		margin: 15px 0;
+	}
+}
+
+.h3{
+	font-family: $font-1;
+	color: $color-1;
+	// font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+
+.h4{
+	color: $color-1;
+	font-family: $font-1;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.paragraph{
+	font-family: $font-2;
+	line-height: 2.2;
+	margin-bottom: 30px;
+	padding: 0;
+
+	& a{
+		text-decoration: underline;
+	}
+
+	& a:hover{
+		color: $color-2;
+	}
+
+	& li{
+		list-style-position: inside;
+	}
+}
+
+.streamer{
+	background: $color-1;
+	padding: 50px 0;
+	color: #fff;
+	font-family: $font-1;
+	font-weight: 700;
+	font-size: 26px;
+
+	& p{
+		// margin-bottom: 20px;
+	}
+}
+
+.address{
+
+	& i{
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	& a{
+		font-weight: bold;
+	}
+}
+
+hr{
+	margin: 70px 0;
+	border-color: $color-1;
+}

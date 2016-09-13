@@ -1,0 +1,26 @@
+.section{
+	padding: 70px 0;
+	background: $section-color;
+
+	&-2{
+		background: #fafafa;
+	}
+
+	&-dark{
+		background: $color-2;
+		color: #fff;
+	}
+
+	&-line{
+		border-bottom: 1px solid $color-1;
+	}
+}
+
+.column{
+	@media all and(max-width: $breakpoint-tablet){
+		margin-bottom: 40px;
+	}
+}
+.no-padding{
+	padding: 0;
+}

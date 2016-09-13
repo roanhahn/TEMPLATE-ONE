@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAgB,CACZ,QAAQ,CAAE,QAAQ,CAClB,gBAAgB,CAAE,IAAI,CAG1B,wBAAwB,CACpB,OAAO,CAAE,IAAI",
+"sources": ["hotels.scss"],
+"names": [],
+"file": "hotels.css"
+}

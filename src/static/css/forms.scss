@@ -1,0 +1,17 @@
+.form-group{
+	margin-bottom: 25px;
+}
+.form-control{
+	font-family: $font-1;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: $color-2;
+
+	&:focus{
+		border-color: $color-1;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+}

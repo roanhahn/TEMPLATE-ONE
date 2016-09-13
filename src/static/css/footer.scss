@@ -1,0 +1,49 @@
+footer{
+	background: $color-3;
+	padding: 100px 0;
+	color: $color-4;
+	font-size: 14px;
+	font-family: $font-1;
+	font-weight: 400;
+
+	& p{
+		line-height: 2;
+		letter-spacing: 1px;
+	}
+
+	& a{
+		color: $color-4;
+	}
+
+	& .social{
+		list-style-type: none;
+		margin: 30px 0 0;
+		padding: 0;
+		letter-spacing: none;
+		font-size: 0px;
+
+		& li{
+			display: inline-block;
+			margin: 0 4px;
+
+			& a{
+				display: block;
+				width: 36px;
+				height: 36px;
+				border: 2px solid $color-4;
+				color: $color-4;
+				font-size: 14px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				line-height: 32px;
+				text-align: center;
+
+				&:hover{
+					background: $color-4;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
