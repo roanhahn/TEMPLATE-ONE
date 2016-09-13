@@ -43,6 +43,9 @@ a {
     color: #c0a15d;
     text-transform: none;
     margin: 15px 0; }
+  @media all and (max-width: 767px) {
+    .h2 {
+      font-size: 26px; } }
 
 .h3 {
   font-family: "Montserrat", serif;
@@ -77,6 +80,19 @@ a {
   font-family: "Montserrat", serif;
   font-weight: 700;
   font-size: 26px; }
+  .streamer .button-inline {
+    margin-left: 10px; }
+  .streamer .small {
+    font-size: 18px;
+    font-family: "Domine", serif; }
+  .streamer p {
+    margin-bottom: 0; }
+  @media all and (max-width: 767px) {
+    .streamer {
+      font-size: 15px;
+      padding: 30px 0; }
+      .streamer .small {
+        font-size: 12px; } }
 
 .address i {
   font-size: 30px;
@@ -204,6 +220,7 @@ hr {
       text-shadow: none; }
       .navbar ul {
         position: absolute;
+        padding: 0;
         top: 50%;
         left: 0;
         right: 0;
@@ -237,7 +254,7 @@ hr {
       display: block; } }
 
 .hero {
-  background: #fff url(http://cdn.mamamia.com.au/wp/wp-content/uploads/2015/11/24091651/hipster-coffee-720x547.jpg) no-repeat center center fixed;
+  background: #fff url(../img/hero.jpg) no-repeat center center fixed;
   background-size: cover;
   min-height: 500px;
   position: relative;
@@ -598,7 +615,7 @@ footer {
   max-height: 100%; }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-  background-image: url("/assets/img/fancybox/fancybox_sprite.png"); }
+  background-image: url("../img/fancybox/fancybox_sprite.png"); }
 
 #fancybox-loading {
   position: fixed;
@@ -614,7 +631,7 @@ footer {
 #fancybox-loading div {
   width: 44px;
   height: 44px;
-  background: url("/assets/img/fancybox/fancybox_loading.gif") center center no-repeat; }
+  background: url("../img/fancybox/fancybox_loading.gif") center center no-repeat; }
 
 .fancybox-close {
   position: absolute;
@@ -632,7 +649,7 @@ footer {
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url("/assets/img/fancybox/blank.gif");
+  background: transparent url("../img/fancybox/blank.gif");
   /* helps IE */
   -webkit-tap-highlight-color: transparent;
   z-index: 8040; }
@@ -691,7 +708,7 @@ footer {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: url("/assets/img/fancybox/fancybox_overlay.png"); }
+  background: url("../img/fancybox/fancybox_overlay.png"); }
 
 .fancybox-overlay-fixed {
   position: fixed;
@@ -757,12 +774,12 @@ footer {
 /*Retina graphics!*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-    background-image: url("/assets/img/fancybox/fancybox_sprite@2x.png");
+    background-image: url("../img/fancybox/fancybox_sprite@2x.png");
     background-size: 44px 152px;
     /*The size of the normal image, half the size of the hi-res image*/ }
 
   #fancybox-loading div {
-    background-image: url("/assets/img/fancybox/fancybox_loading@2x.gif");
+    background-image: url("../img/fancybox/fancybox_loading@2x.gif");
     background-size: 24px 24px;
     /*The size of the normal image, half the size of the hi-res image*/ } }
 

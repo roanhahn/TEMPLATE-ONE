@@ -110,6 +110,7 @@
 
 		& ul{
 			position: absolute;
+			padding: 0;
 			top: 50%;
 			left: 0;
 			right: 0;
@@ -160,7 +161,7 @@
 // HERO SECTION
 
 .hero{
-	background: #fff url(http://cdn.mamamia.com.au/wp/wp-content/uploads/2015/11/24091651/hipster-coffee-720x547.jpg) no-repeat center center fixed;
+	background: #fff url(../img/hero.jpg) no-repeat center center fixed;
 	background-size: cover;
 	min-height: 500px;
 	position: relative;

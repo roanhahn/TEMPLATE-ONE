@@ -50,6 +50,10 @@ a{
 		text-transform: none;
 		margin: 15px 0;
 	}
+
+	@media all and(max-width: $breakpoint-mobile){
+		font-size: 26px;
+	}
 }
 
 .h3{
@@ -86,6 +90,8 @@ a{
 	& li{
 		list-style-position: inside;
 	}
+
+
 }
 
 .streamer{
@@ -96,8 +102,27 @@ a{
 	font-weight: 700;
 	font-size: 26px;
 
+	& .button-inline{
+		margin-left: 10px;
+	}
+
+	& .small{
+		font-size: 18px;
+		font-family: $font-2;
+		// font-style: italic;
+	}
+
 	& p{
-		// margin-bottom: 20px;
+		margin-bottom: 0;
+	}
+
+	@media all and(max-width: $breakpoint-mobile){
+		font-size: 15px;
+		padding: 30px 0;
+
+		& .small{
+			font-size: 12px;
+		}
 	}
 }
 
