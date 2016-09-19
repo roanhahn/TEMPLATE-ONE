@@ -109,6 +109,7 @@ a{
 	& .small{
 		font-size: 18px;
 		font-family: $font-2;
+		margin-top: 5px;
 		// font-style: italic;
 	}
 
@@ -117,11 +118,11 @@ a{
 	}
 
 	@media all and(max-width: $breakpoint-mobile){
-		font-size: 15px;
+		font-size: 18px;
 		padding: 30px 0;
 
 		& .small{
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 }

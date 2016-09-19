@@ -89,6 +89,7 @@
 
 	& iframe, & div{
 		pointer-events: none;
+		width: 100%;
 	}
 	
 }
@@ -138,5 +139,33 @@
 		-ms-transform: scale(1.2, 1.2);
 		-webkit-transform: scale(1.2, 1.2);
 		transform: scale(1.2, 1.2);
+	}
+}
+
+.visual-bar{
+	height: 33vh;
+	position: relative;
+	background: $color-1 url() no-repeat center center scroll;
+	background-size: cover;
+
+	&--fixed{
+		background-attachment: fixed;
+
+		@media all and(max-width: $breakpoint-mobile){
+			background-attachment: scroll;
+		}
+	}
+
+	&--blend:before{
+		content:"";
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: $color-1;
+		opacity: .2;
+		// mix-blend-mode: multiply;
 	}
 }

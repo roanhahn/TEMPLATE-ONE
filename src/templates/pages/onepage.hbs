@@ -4,11 +4,7 @@ type: page
 layout: default.hbs
 ---
 
-
 {{> partial-header }}
-
-
-
 <main>
 	{{> partial-streamer }}
 	<section class="section section-line about">
@@ -38,15 +34,11 @@ layout: default.hbs
 					</p>
 				</div>
 			</div>
-			
-			{{!-- Horizontal rule --}}
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
 					<hr>
 				</div>
 			</div>
-
-
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0 column">
 					<h2 class="h2">About me.</h2>
@@ -58,25 +50,17 @@ layout: default.hbs
 				</div>
 
 				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0">
-					<div class="img-container img-ratio-4-3 illustration"><img src="https://www.iphoned.nl/wp-content/uploads/2014/05/iwatch-groot-580x375.jpg" class="img-responsive"></div>
+					<div class="img-container img-ratio-1-1 illustration"><img src="http://dummyimage.com/600x600/eee/fff.png" class="img-responsive img-circle"></div>
 				</div>
 			</div>
-
-
-			{{!-- Horizontal rule --}}
-			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
-					<hr>
-				</div>
-			</div>
-
-			{{> partial-products }}
-
 		</div>
 	</section>
+	{{> partial-products }}
+	{{> partial-pricelist }}
 	{{> partial-gallery }}
 	{{> partial-streamer }}
 	{{> partial-content }}
+	{{> partial-visual }}
 	{{> partial-video }}
 	{{> partial-address }}
 	{{> partial-contactform }}

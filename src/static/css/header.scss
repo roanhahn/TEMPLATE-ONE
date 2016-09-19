@@ -15,18 +15,18 @@
 .logo{
 	float: left;
 	color: #fff;
-	font-size: 40px;
+	font-size: $font-logo-size;
 	font-family: $font-logo;
 	padding: 25px 0;
 	line-height: 1;
 	white-space: nowrap;
 
-	&:hover{
+	&:hover, &:active, &:visited, &:focus{
 		color: #fff;
 	}
 
 	@media all and(max-width: $breakpoint-tablet){
-		font-size: 30px;
+		font-size: $font-logo-size-mobile;
 		padding-top: 30px;
 	}
 	@media all and(max-width: $breakpoint-tablet){
@@ -69,6 +69,7 @@
 			padding: 40px 0;
 			white-space: nowrap;
 			position: relative;
+			cursor: pointer;
 
 			&:before{
 				content: "";
@@ -146,7 +147,7 @@
 	position: absolute;
 	padding: 10px;
 	line-height: 0;
-	top: 25px;
+	top: 15px;
 	font-weight: normal;
 	right: 15px;
 	font-size: 30px;
@@ -235,6 +236,9 @@
 		@media all and(max-width: $breakpoint-tablet){
 			font-size: 14px;
 		}
+		@media all and(max-width: $breakpoint-mobile){
+			margin-bottom: 20px;
+		}
 	}
 
 	&-second-line{
@@ -246,6 +250,17 @@
 		@media all and(max-width: $breakpoint-tablet){
 			font-size: 18px;
 		}
+		@media all and(max-width: $breakpoint-mobile){
+			margin-bottom: 30px;
+		}
+	}
+
+	& .img-profile{
+		@media all and(max-width: $breakpoint-mobile){
+			width: 80px;
+			height: 80px;
+			margin-bottom: 0px;
+		}		
 	}
 
 	&-video{

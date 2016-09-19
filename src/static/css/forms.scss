@@ -15,3 +15,34 @@
 		box-shadow: none;
 	}
 }
+
+.successContent, .errorContent{
+	text-align: center;
+	margin-bottom: 30px;
+	display: none;
+	font-size: 18px;
+
+	& i{
+		margin-right: 10px;
+	}
+}
+
+.errorContent{
+	color: #c0392b;
+}
+
+.successContent{
+	
+}
+
+.form-group .error{
+	border-color: #c0392b;
+}
+
+label.error{
+	color: #c0392b;
+	font-family: $font-1;
+	font-size: 14px;
+	margin-top: 10px;
+	text-transform: uppercase;
+}

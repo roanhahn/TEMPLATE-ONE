@@ -2,15 +2,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<a href="#" class="logo">Mogador</a>
+				<a href="#" class="logo">{{site.title}}</a>
 				<button class="toggle-nav"><i class="fa fa-bars" aria-hidden="true"></i></button>
 				<nav class="navbar">
 					<button class="toggle-nav close-nav"><i class="fa fa-times" aria-hidden="true"></i></button>
 					<ul>
-						<li><a href="#" class="scroll-to" data-level="about">about</a></li>
-						<li><a href="#" class="scroll-to" data-level="products">Products</a></li>
-						<li><a href="#" class="scroll-to" data-level="gallery">Gallery</a></li>
-						<li><a href="#" class="scroll-to" data-level="contact">Contact</a></li>
+						<li><a class="scroll-to" data-level="about">about</a></li>
+						<li><a class="scroll-to" data-level="products">Products</a></li>
+						<li><a class="scroll-to" data-level="gallery">Gallery</a></li>
+						<li><a class="scroll-to" data-level="contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -18,7 +18,7 @@
 	</div>
 </header>
 
-<div class="hero hero-overlay no-grayscale hero-blend-no" style="background-image: url(http://www.mogadorcafe.nl/wp-content/uploads/BG_01.jpg);">
+<div class="hero hero-overlay no-grayscale hero-blend-no" style="background-image: url(http://www.qstudiomakeup.it/nuovo/wp-content/uploads/2016/02/qstudio-make-up-pencil-thecnique-accademia-professionale-makeupartist.jpg);">
 	{{!-- If client has video --}}
 	{{!-- <div class="hero-video">
 		<video loop="true" autoplay="true" muted="muted" poster="http://www.mogadorcafe.nl/wp-content/uploads/BG_01.jpg">
@@ -31,11 +31,11 @@
 	<div class="container hero-inner">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 text-center">
-				{{!-- <img src="http://topnews.in/light/files/George-Clooney-54.jpg" alt="John Doe" class="img-profile img-circle"> --}}
+				<img src="http://dummyimage.com/300x300/eee/fff.png" alt="John Doe" class="img-profile img-circle">
 				<h1 class="hero-h1">Mogador<span>.</span></h1>
 				<p class="hero-first-line">Since 1999</p>
-				<p class="hero-second-line">Wake up and smell the coffee.</p>
-				{{!-- <a href="#" class="button button-outline-white">Checkout</a> --}}
+				<p class="hero-second-line">{{site.intro}}.</p>
+				{{!-- <a href="#" class="button button-outline-white scroll-to" data-level="about">Read more</a> --}}
 				<a href="#" class="button button-rounded scroll-to" data-level="about"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Checkout</a>
 			</div>
 		</div>

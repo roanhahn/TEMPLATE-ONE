@@ -19,6 +19,8 @@
 	background: $color-1;
 	color: #fff;
 
+	
+
 	&:active, &:focus{
 		color: #fff;
 	}
@@ -27,6 +29,15 @@
 		background: #fff;
 		color: $color-1;
 		padding: 25px 50px;
+	}
+
+	@media all and(max-width: $breakpoint-mobile){
+		padding: 20px 30px;
+		font-size: 13px;
+
+		&:hover{
+			padding: 20px 40px;
+		}
 	}
 
 	&-rounded{
@@ -57,4 +68,14 @@
 			color: $color-1;
 		}
 	}
+}
+
+.back-to-top{
+	background-color: $section-color;
+	width: 100%;
+	border: none;
+	color: $color-1;
+	padding: 20px 0;
+	line-height: 1;
+	font-size: 20px;
 }

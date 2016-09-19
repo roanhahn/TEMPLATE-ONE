@@ -1,6 +1,14 @@
-title: Template-One
-description: desc
+intro: Smell the coffee
+title: TemplateOne
+description: description
+author: author
+developer: Developer
+keywords: keyword,keyword,keyword
 version: 1.1.1
 type: website
 url: url
 ogimage: url
+facebook: http://www.facebook.com
+twitter: http://www.twitter.com
+pinterest: http://www.pinterest.com
+google: http://www.google.com

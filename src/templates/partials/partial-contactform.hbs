@@ -7,39 +7,38 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1">
-				{{!-- Google Maps --}}
-
-				<div class="maps">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.483070313283!2d4.628956716060932!3d52.379792654362355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef15290606eb%3A0x242d053ba096f9a4!2sGasthuisstraat+48%2C+2011+XP+Haarlem!5e0!3m2!1snl!2snl!4v1473760368549" width=100% height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-				
+				{{> partial-map }}
 				<div class="row">
-					<form action="">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="Name" name="Name" placeholder="Naam" required="required" maxlength="30">
+					<form id="contact" class="" role="form">
+						<div class="col-sm-12">
+							<div class="successContent">
+								<i class="fa fa-check"></i>Your message has been sent successfully.
 							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="Email" name="Email" placeholder="E-mail" required="required" maxlength="30">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="Subject" name="Subject" placeholder="Onderwerp" required="required" maxlength="50">
+							<div class="errorContent">
+								<i class="fa fa-exclamation-circle"></i>There was a problem validating the form please check!
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<textarea class="form-control" id="Message" name="Message" placeholder="Bericht" value="" required="required" rows="6" maxlength="100"></textarea>
+								<input type="text" class="form-control" id="name" name="name" placeholder="Naam" required="required" maxlength="30">
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required="required" maxlength="30">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" required="required" maxlength="50">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<textarea class="form-control" id="message" name="message" placeholder="Bericht" value="" required="required" rows="6" maxlength="100" data-validation-required-message="Please enter a message."></textarea>
 							</div>
 						</div>
 						<div class="col-sm-12 text-center">
-							<button type="submit" class="button">verstuur</button>
+							<button type="submit" id="form-submit" name="submit" class="button">verstuur</button>
 						</div>
 					</form>
 				</div>
-
-				
-
-
 			</div>
 		</div>
 	</div>

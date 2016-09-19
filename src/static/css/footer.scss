@@ -6,6 +6,11 @@ footer{
 	font-family: $font-1;
 	font-weight: 400;
 
+	@media all and(max-width: $breakpoint-mobile){
+		font-size: 11px;
+		padding: 50px 0;
+	}
+
 	& p{
 		line-height: 2;
 		letter-spacing: 1px;
@@ -41,7 +46,7 @@ footer{
 
 				&:hover{
 					background: $color-4;
-					color: #fff;
+					color: $color-1;
 				}
 			}
 		}

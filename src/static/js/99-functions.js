@@ -1,4 +1,22 @@
+$(window).load(function () {
+	// Site Preloader
+	$('#preloader').fadeOut('slow', function () {
+		$(this).remove();
+	});
+
+});
+
+
+
 $(document).ready(function() {
+
+
+	if ($( window ).width() > 991){
+		$('.navbar').removeClass("mobile-nav");
+	}
+	else{
+		$('.navbar').addClass("mobile-nav");
+	}
 
 	// replace html code
 	// $( "docs-code" ).html();
@@ -14,6 +32,11 @@ $(document).ready(function() {
 		$( ".navbar" ).fadeToggle( "fast", "linear" );
 	});
 
+	// Scroll back to top
+	$(".back-to-top").click(function(){;
+		$('html, body').animate({scrollTop:0}, 1000);
+		return false;
+	});
 
 
 	// LAZYLOAD
@@ -52,20 +75,35 @@ $(document).ready(function() {
 				duration: 1000, // how fast we are animating
 				easing: 'easeInOutCubic' // the type of easing
 			}
-		);
-		$( ".navbar" ).fadeToggle( "fast", "linear" );
+			);
+		$( ".mobile-nav" ).fadeOut( "fast", "linear" );
 	});
-
-
 });
 
-$(window).scroll(function(){
-	if ($(this).scrollTop() > 400) {
-		$('.back-to-top').fadeIn();
-	} else {
-		$('.back-to-top').fadeOut();
+$(window).resize(function(){
+	// $( "body" ).prepend( "<div>" + $( window ).width() + siteWidth +  "</div>" );
+	if ($( window ).width() > 991){
+		$('.navbar').removeClass("mobile-nav");
+	}
+	else{
+		$('.navbar').addClass("mobile-nav");
 	}
 });
+
+// $(window).scroll(function(){
+// 	if ($(this).scrollTop() > 400) {
+// 		$('.back-to-top').fadeIn();
+// 	} else {
+// 		$('.back-to-top').fadeOut();
+// 	}
+// });
+
+
+
+
+
+
+
 
 
 
