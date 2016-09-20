@@ -18,7 +18,20 @@
 	</div>
 </header>
 
-<div class="hero hero-overlay no-grayscale hero-blend-no" style="background-image: url(http://www.qstudiomakeup.it/nuovo/wp-content/uploads/2016/02/qstudio-make-up-pencil-thecnique-accademia-professionale-makeupartist.jpg);">
+
+
+
+
+<div class="hero hero-overlay no-grayscale hero-blend-no" style="background-image: url(assets/img/01.jpg);">
+
+	{{!-- IF SLIDESHOW --}}
+
+	<div class="background_cycler">
+		<div class="slide-1 active" style="background-image: url(assets/img/01.jpg);"></div>
+		<div class="slide-2" style="background-image: url(assets/img/02.jpg);"></div>
+		<div class="slide-3" style="background-image: url(assets/img/03.jpg);"></div>
+	</div>
+
 	{{!-- If client has video --}}
 	{{!-- <div class="hero-video">
 		<video loop="true" autoplay="true" muted="muted" poster="http://www.mogadorcafe.nl/wp-content/uploads/BG_01.jpg">
@@ -31,12 +44,12 @@
 	<div class="container hero-inner">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 text-center">
-				<img src="http://dummyimage.com/300x300/eee/fff.png" alt="John Doe" class="img-profile img-circle">
-				<h1 class="hero-h1">Mogador<span>.</span></h1>
-				<p class="hero-first-line">Since 1999</p>
-				<p class="hero-second-line">{{site.intro}}.</p>
+				{{!-- <img src="http://dummyimage.com/300x300/eee/fff.png" alt="John Doe" class="img-profile img-circle"> --}}
+				<h1 class="hero-h1">Nulla consequat massa quis enim</h1>
+				<p class="hero-first-line">Nulla consequat massa quis enim</p>
+				{{!-- <p class="hero-second-line">{{site.intro}}.</p> --}}
 				{{!-- <a href="#" class="button button-outline-white scroll-to" data-level="about">Read more</a> --}}
-				<a href="#" class="button button-rounded scroll-to" data-level="about"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Checkout</a>
+				<a href="#" class="button button-rounded scroll-to" data-level="about">Read more</a>
 			</div>
 		</div>
 	</div>

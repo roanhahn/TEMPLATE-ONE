@@ -1,9 +1,10 @@
 
-
+// BREAKPOINTS
 $breakpoint-desktop: 1199px;
 $breakpoint-tablet: 991px;
 $breakpoint-mobile: 767px;
 
+// FONTS
 $font-1: 'Montserrat', serif;	// Headings
 $font-2: 'Domine', serif;		// Text
 $font-logo: 'Merriweather', serif;	// Logo
@@ -12,16 +13,23 @@ $font-logo-size-mobile: 25px;
 
 
 // Text colors
+$color-1: #17bebb; // Headers, links and buttons
+$color-2: #2e282a; // Text color
 
-$color-1: #7d387d; // Headers, links and buttons
-$color-2: #27474e; // Text color
+$alt-color-1: #e282a; // Color of heading in grey section
+$alt-color-2: #fff; // Color of subheading in grey section
+
+$line-color: red;
+
+// STREAMER
+$streamer-bg-color: #2e282a;
+$streamer-text-color: #17bebb;
 
 // Footer
-
-$color-3: #27474e; // Footer background color
+$color-3: #221d23; // Footer background color
 $color-4: #fff; // Footer text color
 
 // Section Light or Dark
-
 $section-color: #fff;	// Background-color of blocks
+$section-grey-color: #909590;
 

@@ -107,9 +107,10 @@
 			color: #fff;
 			display: block;
 			position: absolute;
-			top: -50%;
+			top: 50%;
 			left: 50%;
 			z-index: 10;
+			opacity: 0;
 			font-family: "FontAwesome";
 			-ms-transform: translate(-50%, -50%);
 			-webkit-transform: translate(-50%, -50%);
@@ -120,7 +121,7 @@
 		}
 
 		&:hover:before{
-			top: 50%;
+			opacity: 1;
 		}
 	}
 
