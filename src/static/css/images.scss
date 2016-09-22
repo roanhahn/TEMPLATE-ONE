@@ -115,13 +115,15 @@
 			-ms-transform: translate(-50%, -50%);
 			-webkit-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
-			-webkit-transition: all .2s ease-in-out 0s;
-			-moz-transition: all .2s ease-in-out 0s;
-			-o-transition: all .2s ease-in-out 0s;
+			
 		}
 
 		&:hover:before{
 			opacity: 1;
+			-webkit-transition: all .2s ease-in-out .2s;
+			-moz-transition: all .2s ease-in-out .2s;
+			-o-transition: all .2s ease-in-out .2s;
+			transition: all .2s ease-in-out .2s;
 		}
 	}
 
