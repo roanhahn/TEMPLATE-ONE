@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Domine:400,700|Merriweather|Dancing+Script";
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Domine:400,700|Merriweather|Dancing+Script|Raleway:300,400,500";
 @import url(bootstrap.css);
 #preloader {
   background-color: #fff;
@@ -30,7 +30,7 @@
   -webkit-animation: site-spin 1s linear infinite;
   -moz-animation: site-spin 1s linear infinite;
   animation: site-spin 1s linear infinite;
-  border-top-color: #c59849; }
+  border-top-color: #fb4b4e; }
 
 @-webkit-keyframes site-spin {
   to {
@@ -58,8 +58,8 @@ body, html {
   background: #fff;
   font-weight: 400;
   font-size: 16px;
-  font-family: "Domine", serif;
-  color: #293241;
+  font-family: "Raleway", serif;
+  color: #3e000c;
   height: 100%;
   background: #fff;
   -webkit-overflow-scrolling: touch;
@@ -75,14 +75,14 @@ a {
   -moz-transition: all .2s ease-in-out 0s;
   -o-transition: all .2s ease-in-out 0s;
   transition: all .2s ease-in-out 0s;
-  color: #c59849; }
+  color: #fb4b4e; }
   a:hover {
     text-decoration: none;
-    color: #c59849; }
+    color: #fb4b4e; }
 
 .h2 {
   font-family: "Montserrat", serif;
-  color: #293241;
+  color: #3e000c;
   font-weight: 700;
   font-size: 36px;
   margin-top: 0;
@@ -90,8 +90,8 @@ a {
   text-transform: uppercase; }
   .h2 small {
     display: block;
-    font-family: "Domine", serif;
-    color: #c59849;
+    font-family: "Raleway", serif;
+    color: #fb4b4e;
     text-transform: none;
     margin: 15px 0 70px; }
   @media all and (max-width: 767px) {
@@ -105,12 +105,13 @@ a {
 
 .h3 {
   font-family: "Montserrat", serif;
-  color: #c59849;
+  color: #fb4b4e;
   font-size: 28px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  line-height: 1.4; }
 
 .h4 {
-  color: #c59849;
+  color: #fb4b4e;
   font-family: "Montserrat", serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -118,21 +119,21 @@ a {
   margin-bottom: 20px; }
 
 .paragraph {
-  font-family: "Domine", serif;
+  font-family: "Raleway", serif;
   line-height: 2.2;
   margin-bottom: 30px;
   padding: 0; }
   .paragraph a {
     text-decoration: underline; }
   .paragraph a:hover {
-    color: #293241; }
+    color: #3e000c; }
   .paragraph li {
     list-style-position: inside; }
 
 .streamer {
-  background: #2e282a;
+  background: #3e000c;
   padding: 50px 0;
-  color: #17bebb;
+  color: #fb4b4e;
   font-family: "Montserrat", serif;
   font-weight: 700;
   font-size: 26px; }
@@ -140,7 +141,7 @@ a {
     margin-left: 10px; }
   .streamer .small {
     font-size: 18px;
-    font-family: "Domine", serif;
+    font-family: "Raleway", serif;
     margin-top: 5px; }
   .streamer p {
     margin-bottom: 0; }
@@ -159,7 +160,7 @@ a {
 
 hr {
   margin: 70px 0;
-  border-color: red; }
+  border-color: #7c0b2b; }
 
 .pricelist {
   font-family: "Montserrat", serif;
@@ -204,9 +205,9 @@ hr {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-  color: #293241; }
+  color: #3e000c; }
   .form-control:focus {
-    border-color: #c59849;
+    border-color: #fb4b4e;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
@@ -236,12 +237,12 @@ label.error {
   padding: 70px 0;
   background: #fff; }
   .section-2 {
-    background: #909590; }
+    background: #3e000c; }
   .section-dark {
-    background: #293241;
+    background: #3e000c;
     color: #fff; }
   .section-line {
-    border-bottom: 1px solid red; }
+    border-bottom: 1px solid #7c0b2b; }
 
 @media all and (max-width: 991px) {
   .column {
@@ -347,7 +348,7 @@ label.error {
           padding: 20px 0;
           font-size: 16px; }
           .navbar li a:hover {
-            color: #c59849; }
+            color: #fb4b4e; }
           .navbar li a:before {
             display: none; } }
 
@@ -373,7 +374,7 @@ label.error {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 75vh;
   font-family: "Montserrat", serif;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
@@ -393,7 +394,7 @@ label.error {
   .hero-blend:before {
     content: "";
     display: block;
-    background-color: #c59849;
+    background-color: #fb4b4e;
     position: absolute;
     left: 0;
     right: 0;
@@ -415,7 +416,7 @@ label.error {
     font-weight: 700;
     margin-bottom: 10px; }
     .hero-h1 span {
-      color: #c59849; }
+      color: #fb4b4e; }
     @media all and (max-width: 767px) {
       .hero-h1 {
         font-size: 32px; } }
@@ -432,7 +433,7 @@ label.error {
       .hero-first-line {
         margin-bottom: 20px; } }
   .hero-second-line {
-    font-family: "Domine", serif;
+    font-family: "Raleway", serif;
     font-size: 30px;
     margin-bottom: 50px;
     font-weight: 400; }
@@ -499,7 +500,7 @@ label.error {
   z-index: 3; }
 
 footer {
-  background: #221d23;
+  background: #fb4b4e;
   padding: 100px 0;
   color: #fff;
   font-size: 14px;
@@ -537,7 +538,7 @@ footer {
         text-align: center; }
         footer .social li a:hover {
           background: #fff;
-          color: #c59849; }
+          color: #fb4b4e; }
 
 .button {
   padding: 25px 40px;
@@ -555,15 +556,15 @@ footer {
   transition: all 0.2s ease-in-out 0s;
   font-family: "Montserrat", serif;
   border-width: 2px;
-  border-color: #c59849;
+  border-color: #fb4b4e;
   border-style: solid;
-  background: #c59849;
+  background: #fb4b4e;
   color: #fff; }
   .button:active, .button:focus {
     color: #fff; }
   .button:hover {
     background: #fff;
-    color: #c59849;
+    color: #fb4b4e;
     padding: 25px 50px; }
   @media all and (max-width: 991px) {
     .button {
@@ -589,13 +590,13 @@ footer {
     border-style: solid; }
     .button-outline-white:hover {
       background-color: #fff;
-      color: #c59849; }
+      color: #fb4b4e; }
 
 .back-to-top {
   background-color: #fff;
   width: 100%;
   border: none;
-  color: #c59849;
+  color: #fb4b4e;
   padding: 20px 0;
   line-height: 1;
   font-size: 20px; }
@@ -608,8 +609,8 @@ footer {
   transition: all .2s ease-in-out 0s; }
 
 .thumbnail {
-  background: #293241;
-  border-color: #c59849;
+  background: #3e000c;
+  border-color: #fb4b4e;
   border: none;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -684,7 +685,7 @@ footer {
   padding-bottom: 0; }
   .gallery .img-container {
     margin-bottom: 0;
-    background: #293241; }
+    background: #3e000c; }
     .gallery .img-container:before {
       content: "\f002";
       font-size: 30px;
@@ -722,7 +723,7 @@ footer {
 .visual-bar {
   height: 33vh;
   position: relative;
-  background: #c59849 url() no-repeat center center scroll;
+  background: #fb4b4e url() no-repeat center center scroll;
   background-size: cover; }
   .visual-bar--fixed {
     background-attachment: fixed; }
@@ -737,7 +738,7 @@ footer {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #c59849;
+    background: #fb4b4e;
     opacity: .2; }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
