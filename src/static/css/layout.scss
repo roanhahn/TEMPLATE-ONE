@@ -1,14 +1,22 @@
 .section{
-	padding: 70px 0;
+	padding: $section-padding 0;
 	background: $section-color;
 
-	&-2{
+	&-grey{
 		background: $section-grey-color;
+		color: $alt-color-1;
+
+		& .h2{
+			color: $alt-color-1 !important;
+
+			& small{
+				color: $alt-color-1 !important;
+			}
+		}
 	}
 
 	&-dark{
-		background: $color-2;
-		color: #fff;
+		background: $section-dark-color;
 	}
 
 	&-line{

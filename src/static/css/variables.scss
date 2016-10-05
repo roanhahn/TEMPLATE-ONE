@@ -4,7 +4,12 @@ $breakpoint-desktop: 1199px;
 $breakpoint-tablet: 991px;
 $breakpoint-mobile: 767px;
 
+
+$hero-height: 90vh;
+$graphic-height: 50vh;
+
 // FONTS
+$font-size: 17px;
 $font-1: 'Montserrat', serif;	// Headings
 $font-2: 'Raleway', serif;		// Text
 $font-logo: 'Merriweather', serif;	// Logo
@@ -13,23 +18,26 @@ $font-logo-size-mobile: 25px;
 
 
 // Text colors
-$color-1: #fb4b4e; // Headers, links and buttons
-$color-2: #3e000c; // Text color
+$color-1: #1f2232; // Headers
+$color-2: #1f2232; // Text color
 
-$alt-color-1: #e282a; // Color of heading in grey section
-$alt-color-2: #fff; // Color of subheading in grey section
+$alt-color-1: #1f2232; // Color of heading in grey section
+$alt-color-2: #1f2232; // Color of subheading in grey section
+
+$link-color: #2d3a3a;
 
 $line-color: #7c0b2b;
 
 // STREAMER
-$streamer-bg-color: #3e000c;
-$streamer-text-color: #fb4b4e;
+$streamer-bg-color: #eef4f4;
+$streamer-text-color: #1f2232;
 
 // Footer
-$color-3: #fb4b4e; // Footer background color
-$color-4: #fff; // Footer text color
+$color-3: #eef4f4; // Footer background color
+$color-4: #1f2232; // Footer text color
 
 // Section Light or Dark
 $section-color: #fff;	// Background-color of blocks
-$section-grey-color: #3e000c;
-
+$section-grey-color: #eef4f4;
+$section-dark-color: #eef4f4;
+$section-padding: 140px;

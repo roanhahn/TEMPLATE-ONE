@@ -1,17 +1,26 @@
+
+
 <header class="header">
+	<button class="toggle-nav"><i class="md-menu"></i></button>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<a href="#" class="logo">{{site.title}}</a>
-				<button class="toggle-nav"><i class="fa fa-bars" aria-hidden="true"></i></button>
+				{{!-- IF TEXT LOGO --}}
+				{{!-- <a href="#" class="logo">{{site.title}}</a> --}}
+
+				{{!-- IF IMAGE LOGO --}}
+
+				{{!-- <a href="#" class="logo"><img src="http://dummyimage.com/600x600/eee/fff.png" alt=""></a> --}}
+
+				
 				<nav class="navbar">
-					<button class="toggle-nav close-nav"><i class="fa fa-times" aria-hidden="true"></i></button>
+					<button class="toggle-nav close-nav"><i class="md-close"></i></button>
 					<ul>
-						<li><a class="scroll-to" data-level="about">Over ons</a></li>
-						<li><a class="scroll-to" data-level="products">Producten</a></li>
-						<li><a class="scroll-to" data-level="gallery">Impressie</a></li>
-						<li><a class="scroll-to" data-level="products">Prijzen</a></li>
-						<li><a class="scroll-to" data-level="contact">Contact</a></li>
+						{{!-- <li><a class="scroll-to" data-level="about">Home</a></li> --}}
+						<li><a class="scroll-to" data-level="about">About</a></li>
+						<li><a class="scroll-to" data-level="gallery">Gallery</a></li>
+						<li><a class="scroll-to" data-level="address">Contact</a></li>
+						{{!-- <li><a class="scroll-to" data-level="contact">Menu</a></li> --}}
 					</ul>
 				</nav>
 			</div>
@@ -23,7 +32,7 @@
 
 
 
-<div class="hero hero-overlay no-grayscale hero-blend2" style="background-image: url(http://lemerg.com/data/wallpapers/21/678745.jpg);">
+<div class="hero hero-overlay hero-blend2" style="background-image: url(assets/img/hero/2.jpg); background-position: top center;">
 
 	{{!-- IF SLIDESHOW --}}
 
@@ -43,14 +52,19 @@
 	<div class="container hero-inner">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 text-center">
+				<img src="assets/img/logo.svg" class="img-logo">
 				{{!-- <img src="http://dummyimage.com/300x300/eee/fff.png" alt="John Doe" class="img-profile img-circle"> --}}
-				<h1 class="hero-h1">kappers.</h1>
-				<p class="hero-first-line">Since 1999</p>
-				<p class="hero-second-line">{{site.intro}}.</p>
-				<a href="#" class="button button-rounded button-outline-white scroll-to" data-level="about">Meer</a>
-				{{!-- <a href="#" class="button scroll-to" data-level="about">Read more</a> --}}
+				
+				{{!-- <h1 class="hero-h1">John Brown.</h1> --}}
+				{{!-- <p class="hero-first-line">{{site.intro}}</p> --}}
+				{{!-- <p class="hero-second-line">{{site.intro}}.</p> --}}
+				{{!-- <a href="#" class="button button-rounded scroll-to" data-level="about">Meer</a> --}}
+				
 			</div>
 		</div>
 	</div>
+
+	<a href="#" class="button button-more button-outline-white scroll-to" data-level="about">Read more</a>
+
 </div>
 
