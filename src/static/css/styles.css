@@ -306,7 +306,7 @@ label.error {
   max-width: 30vw; }
   @media all and (max-width: 991px) {
     .img-logo {
-      max-width: 50vw; } }
+      max-width: 65vw; } }
 
 .container-fluid .logo {
   margin-left: 30px; }
@@ -559,7 +559,7 @@ footer {
   font-weight: 400; }
   @media all and (max-width: 767px) {
     footer {
-      padding: 50px 0; } }
+      padding: 50px 0 30px; } }
   footer p {
     line-height: 2;
     letter-spacing: 1px; }
