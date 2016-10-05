@@ -100,7 +100,7 @@
 
 
 	& .img-container{
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 		background: $color-2;
 
 		&:before{
@@ -145,6 +145,17 @@
 		-webkit-transform: scale(1.2, 1.2);
 		transform: scale(1.2, 1.2);
 	}
+
+	.gallery-item
+	{
+		margin-bottom: 30px;
+		@media all and(max-width: $breakpoint-mobile){
+			padding: 0;
+			margin-bottom: 0px;
+		}
+	}
+	
+	
 }
 
 .visual-bar{
