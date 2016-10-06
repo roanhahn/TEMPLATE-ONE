@@ -1,5 +1,5 @@
 .form-group{
-	margin-bottom: 25px;
+	margin-bottom: 22px;
 }
 .form-control{
 	font-family: $font-2;
@@ -8,6 +8,8 @@
 	border-radius: 0px;
 	color: $color-2;
 	border-color: $form-border-color;
+	padding: 12px 12px;
+	height: auto;
 	-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;

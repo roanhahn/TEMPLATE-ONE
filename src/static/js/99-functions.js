@@ -12,7 +12,7 @@ function cycleImages(){
 
 $(window).load(function () {
 	// Site Preloader
-	$('#preloader').fadeOut('slow', function () {
+	$('#preloader').delay( 2000 ).fadeOut('slow', function () {
 		$(this).remove();
 	});
 

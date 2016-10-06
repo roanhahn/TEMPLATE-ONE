@@ -41,7 +41,7 @@ a{
 	font-weight: 700;
 	font-size: 32px;
 	margin-top: 0;
-	line-height: 1.4;
+	line-height: 1.2;
 	letter-spacing: 3px;
 	margin-bottom: 50px;
 	text-transform: uppercase;
@@ -54,6 +54,7 @@ a{
 		// text-transform: none;
 		margin: 15px 0 0;
 		letter-spacing: 1px;
+		line-height: 1.5;
 	}
 
 	&:after{
@@ -66,7 +67,7 @@ a{
 	}
 
 	@media all and(max-width: $breakpoint-mobile){
-		font-size: 26px;
+		font-size: 23px;
 	}
 }
 
@@ -164,8 +165,8 @@ a{
 	}
 
 	@media all and(max-width: $breakpoint-mobile){
-		font-size: 18px;
-		padding: 30px 0;
+		font-size: 17px;
+		// padding: 30px 0;
 
 		& .small{
 			font-size: 14px;

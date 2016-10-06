@@ -87,7 +87,7 @@ a {
   font-weight: 700;
   font-size: 32px;
   margin-top: 0;
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: 3px;
   margin-bottom: 50px;
   text-transform: uppercase; }
@@ -97,7 +97,8 @@ a {
     color: #1f2232;
     font-size: 15px;
     margin: 15px 0 0;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    line-height: 1.5; }
   .h2:after {
     display: block;
     content: "";
@@ -107,7 +108,7 @@ a {
     margin-top: 30px; }
   @media all and (max-width: 767px) {
     .h2 {
-      font-size: 26px; } }
+      font-size: 23px; } }
 
 .text-center h2:after {
   margin: 30px auto 0; }
@@ -164,8 +165,7 @@ a {
     margin-bottom: 0; }
   @media all and (max-width: 767px) {
     .streamer {
-      font-size: 18px;
-      padding: 30px 0; }
+      font-size: 17px; }
       .streamer .small {
         font-size: 14px; } }
 
@@ -216,7 +216,7 @@ hr {
       background-color: rgba(23, 61, 80, 0.06); }
 
 .form-group {
-  margin-bottom: 25px; }
+  margin-bottom: 22px; }
 
 .form-control {
   font-family: "Raleway", serif;
@@ -225,6 +225,8 @@ hr {
   border-radius: 0px;
   color: #1f2232;
   border-color: #eef4f4;
+  padding: 12px 12px;
+  height: auto;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
@@ -306,7 +308,7 @@ label.error {
 
 .img-logo {
   width: 100%;
-  max-width: 30vw; }
+  max-width: 25vw; }
   @media all and (max-width: 991px) {
     .img-logo {
       max-width: 65vw; } }
@@ -420,7 +422,7 @@ label.error {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   font-family: "Montserrat", serif;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
