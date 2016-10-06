@@ -40,6 +40,12 @@
 		}
 	}
 
+	&-reversed{
+		border-color: $link-color;
+		background: transparent;
+		color: $link-color;
+	}
+
 	&-rounded{
 		-webkit-border-radius: 35px;
 		-moz-border-radius: 35px;
