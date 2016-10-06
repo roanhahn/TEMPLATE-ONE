@@ -96,7 +96,6 @@ a {
     font-family: "Raleway", serif;
     color: #1f2232;
     font-size: 15px;
-    text-transform: none;
     margin: 15px 0 0;
     letter-spacing: 1px; }
   .h2:after {
@@ -178,7 +177,7 @@ a {
 
 hr {
   margin: 70px 0;
-  border-color: #7c0b2b; }
+  border-color: #eef4f4; }
 
 .pricelist {
   font-family: "Montserrat", serif;
@@ -220,11 +219,15 @@ hr {
   margin-bottom: 25px; }
 
 .form-control {
-  font-family: "Montserrat", serif;
+  font-family: "Raleway", serif;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-  color: #1f2232; }
+  color: #1f2232;
+  border-color: #eef4f4;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
   .form-control:focus {
     border-color: #1f2232;
     -webkit-box-shadow: none;
@@ -253,7 +256,7 @@ label.error {
   text-transform: uppercase; }
 
 .section {
-  padding: 140px 0;
+  padding: 120px 0;
   background: #fff; }
   .section-grey {
     background: #eef4f4;
@@ -263,9 +266,9 @@ label.error {
       .section-grey .h2 small {
         color: #1f2232 !important; }
   .section-dark {
-    background: #eef4f4; }
+    background: #333333; }
   .section-line {
-    border-bottom: 1px solid #7c0b2b; }
+    border-bottom: 1px solid #eef4f4; }
 
 @media all and (max-width: 991px) {
   .column {

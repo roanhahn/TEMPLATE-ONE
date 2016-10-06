@@ -26,7 +26,10 @@ $alt-color-2: #1f2232; // Color of subheading in grey section
 
 $link-color: #2d3a3a;
 
-$line-color: #7c0b2b;
+$line-color: #eef4f4;
+
+// FORMS
+$form-border-color: #eef4f4;
 
 // STREAMER
 $streamer-bg-color: #eef4f4;
@@ -39,5 +42,5 @@ $color-4: #1f2232; // Footer text color
 // Section Light or Dark
 $section-color: #fff;	// Background-color of blocks
 $section-grey-color: #eef4f4;
-$section-dark-color: #eef4f4;
-$section-padding: 140px;
+$section-dark-color: #333333;
+$section-padding: 120px;
