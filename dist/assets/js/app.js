@@ -2331,6 +2331,232 @@ b.current,e=d.title,c=a.type;f.isFunction(e)&&(e=e.call(d.element,d));if(q(e)&&"
 e=f(this),c=this.selector||"",k=function(g){var h=f(this).blur(),j=d,k,l;!g.ctrlKey&&(!g.altKey&&!g.shiftKey&&!g.metaKey)&&!h.is(".fancybox-wrap")&&(k=a.groupAttr||"data-fancybox-group",l=h.attr(k),l||(k="rel",l=h.get(0)[k]),l&&(""!==l&&"nofollow"!==l)&&(h=c.length?f(c):e,h=h.filter("["+k+'="'+l+'"]'),j=h.index(this)),a.index=j,!1!==b.open(h,a)&&g.preventDefault())};a=a||{};d=a.index||0;!c||!1===a.live?e.unbind("click.fb-start").bind("click.fb-start",k):p.undelegate(c,"click.fb-start").delegate(c+
 ":not('.fancybox-item, .fancybox-nav')","click.fb-start",k);this.filter("[data-fancybox-start=1]").trigger("click");return this};p.ready(function(){var a,d;f.scrollbarWidth===v&&(f.scrollbarWidth=function(){var a=f('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo("body"),b=a.children(),b=b.innerWidth()-b.height(99).innerWidth();a.remove();return b});if(f.support.fixedPosition===v){a=f.support;d=f('<div style="position:fixed;top:20px;"></div>').appendTo("body");var e=20===
 d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defaults,{scrollbarWidth:f.scrollbarWidth(),fixed:f.support.fixedPosition,parent:f("body")});a=f(r).width();J.addClass("fancybox-lock-test");d=f(r).width();J.removeClass("fancybox-lock-test");f("<style type='text/css'>.fancybox-margin{margin-right:"+(d-a)+"px;}</style>").appendTo("head")})})(window,document,jQuery);
+(function ( $ ) {
+
+	$.fn.mpmansory = function ( options ) {
+
+		var settings = $.extend({
+			childrenClass: '',
+			breakpoints: {
+					lg: 4,
+					md: 4,
+					sm: 6,
+					xs: 12
+			},
+			distributeBy: {
+				attr: 'data-order',
+				attrOrder: 'asc',
+				order: false,
+				height: false
+			},
+			onload: function ( items ) {
+				return true;
+			}
+			
+		}, options);
+
+		Array.min = function( array ){
+		    return Math.min.apply( Math, array );
+		};
+
+		$.emptyArray = function ( array ) {
+			for (var i = 0; i<array.length; i++) {
+				array[i].remove();
+			}
+
+			return new Array();
+		}
+
+		$.fn.initialize = function ( columns, classStr ) {
+			/*
+			 * @params [string] {classStr} - the bootstrap column string
+			 * @return [Array] - list of columns to create
+			 * @description - creates the grid columns in wich the items will be distributed
+			 */
+			
+			var cols = [];
+
+			for (var i = 0; i<columns; i++) {
+				
+				var wrap = $('<div></div>');
+				wrap.addClass(classStr);
+				$(this).append(wrap);
+				cols.push(wrap);
+			
+			}
+
+			return cols;
+
+		}
+
+		$.fn.distributeItemsByHeight = function ( wrappers, items ) {
+			/*
+			 * @params [Array] {wrappers} - the array containing the columns elements
+			 * @params [Array] {items} - the array containing items
+			 * @description - distribute the items through the columns - to the columns with lowest height
+			 */
+			var counter = 0;
+
+			for (var k = 0; k<items.length; k++) {
+
+				var $heights = new Array();
+
+				for (var i = 0; i<wrappers.length; i++ ) {
+
+					//get the wrappers height
+					
+					$heights.push(wrappers[i].height());
+
+				}
+
+				//get the wrapper with the lowest height
+				var min = Array.min($heights) == Number.POSITIVE_INFINITY || Array.min($heights) == Number.NEGATIVE_INFINITY ? 0 : Array.min($heights);
+				wrappers[$heights.indexOf(min)].append(items[k]);
+	
+			}
+
+		}
+
+		$.fn.getCurrentColumnSize = function () {
+
+			if ($(window).width() > 1200) {
+				return 'lg';
+			} else if ($(window).width() > 992) {
+				return 'md';
+			} else if ($(window).width() > 720) {
+				return 'sm';
+			} else if ($(window).width() > 480) {
+				return 'xs';
+			} else if ($(window).width() > 320) {
+				return 'xs';
+			} else {
+				return 'xs';
+			}
+
+		}
+
+		$.fn.distributeItemsByOrder = function ( wrappers, items ) {
+			/*
+			 * @params [Array] {wrappers} - the array containing the columns elements
+			 * @params [Array] {items} - the array containing items
+			 * @description - distribute the items through the columns - to the columns with lowest height
+			 */
+			var counter = 0;
+
+			for (var k = 0; k<items.length; k++) {
+				if (counter == wrappers.length) counter = 0; 
+				wrappers[counter].append(items[k]);
+				counter++;
+			}
+
+		}
+
+		$.fn.orderItemsByAttr = function (items, order) {
+
+			var attrs = new Array();
+			for ( var k = 0; k<items.length; k++ ) {
+				attrs.push($(items[k]).attr(order.attr));
+			}
+
+			if  (order.attrOrder == 'asc') {
+				attrs.sort(function (a, b) { return a-b });
+			} else {
+				attrs.sort(function (a, b) { return b-a });
+			}
+
+			var ordered_items = new Array();
+
+			for ( var i = 0; i<attrs.length; i++) {
+				var item = $.grep(items, function (e) {return $(e).attr(order.attr) == attrs[i]});
+				ordered_items.push(item);
+			}
+			return ordered_items;
+		}
+
+		$.fn.distributeItemsByAttr = function ( wrappers, items, order) {
+
+			var counter = 0;
+			var counter2 = 0;
+
+			for (var i = 0; i<items.length; i++) {
+				
+				if (counter == wrappers.length) counter = 0;
+				if ( items[i].length > 1) {
+					if (counter2 == items[i].length) counter2 = 0; 
+					wrappers[counter].append($(items[i][counter2]));
+					counter2++;
+				} else {
+					wrappers[counter].append($(items[i]));	
+				}
+				counter++;
+			}	
+		}
+
+		$.fn.apply = function ( settings, nrOfColumns, wrappers, items ) {
+
+			var _this = $(this);
+			
+			var currentSize = _this.getCurrentColumnSize();
+
+			var columns = nrOfColumns; //find number of columns
+
+			//build the bootstrap class string
+			var classStr = "col-lg-" + settings.breakpoints.lg + " col-md-"+settings.breakpoints.md + " col-sm-" + settings.breakpoints.sm + " col-xs-" + settings.breakpoints.xs + " " + settings.columnClasses;
+
+			wrappers = $(this).initialize( columns, classStr ); //create columns'white
+
+			if ( settings.distributeBy.order ) {
+				_this.distributeItemsByOrder( wrappers, items); //apply mansory		
+			} else if ( settings.distributeBy.height ) {
+				_this.distributeItemsByHeight( wrappers, items); //apply mansory
+			} else if ( settings.distributeBy.attr ) {
+				_this.distributeItemsByAttr( wrappers, _this.orderItemsByAttr(items, settings.distributeBy), settings.distributeBy);
+			}
+			return { wrappers: wrappers, items: items };
+		}
+
+
+
+		return this.each(function () {
+
+			var _this = $(this);
+
+			var currentSize = _this.getCurrentColumnSize();
+
+			var numberOfColumns = 12 / settings.breakpoints[currentSize];
+
+			var items = _this.children( (settings.childrenClass != '' ? '.'+settings.childrenClass : 'div') );
+
+			var wrappers = new Array();
+
+			var returns = _this.apply( settings, numberOfColumns, wrappers, items );
+			
+			wrappers = returns.wrappers;
+
+			$(window).on('resize', function ( e ) {
+
+				if (_this.getCurrentColumnSize() != currentSize ) {
+					numberOfColumns = 12 / settings.breakpoints[_this.getCurrentColumnSize()];
+					wrappers = $.emptyArray(wrappers);
+					returns = _this.apply( settings , numberOfColumns, wrappers, items);
+					wrappers = returns.wrappers;
+					currentSize = _this.getCurrentColumnSize();
+
+				}
+
+			});
+
+			if (settings.hasOwnProperty('onload')) {
+
+				//execute on load
+				settings.onload( items );
+
+			}
+
+		});
+	}
+
+})(jQuery);
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4774,6 +5000,7 @@ $(document).ready(function() {
 				locked: false
 			}
 		},
+		padding : 0,
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
@@ -4792,6 +5019,25 @@ $(document).ready(function() {
 			);
 		$( ".mobile-nav" ).fadeOut( "fast", "linear" );
 	});
+
+	// MASONRY
+
+	$("#gallery-mansory").mpmansory(
+		{
+			childrenClass: 'item', // default is a div
+			columnClasses: 'padding', //add classes to items
+			breakpoints:{
+				lg: 3, 
+				md: 4, 
+				sm: 6,
+				xs: 12
+			},
+			distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, //default distribute by order, options => order: true/false, height: true/false, attr => 'data-order', attrOrder=> 'asc'/'desc'
+			onload: function (items) {
+				//make somthing with items
+			} 
+		}
+	);
 });
 
 $(window).resize(function(){

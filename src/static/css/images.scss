@@ -99,34 +99,9 @@
 
 
 
-	& .img-container{
-		// margin-bottom: 30px;
+	
+	& .item{
 		background: $color-2;
-
-		&:before{
-			content: "\f002";
-			font-size: 30px;
-			color: #fff;
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			z-index: 10;
-			opacity: 0;
-			font-family: "FontAwesome";
-			-ms-transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			
-		}
-
-		&:hover:before{
-			opacity: 1;
-			-webkit-transition: all .2s ease-in-out .2s;
-			-moz-transition: all .2s ease-in-out .2s;
-			-o-transition: all .2s ease-in-out .2s;
-			transition: all .2s ease-in-out .2s;
-		}
 	}
 
 	& img{
@@ -134,28 +109,27 @@
 		-moz-transition: all .2s ease-in-out 0s;
 		-o-transition: all .2s ease-in-out 0s;
 		transition: all .2s ease-in-out 0s;
-		-ms-transform: scale(1.1, 1.1);
-		-webkit-transform: scale(1.1, 1.1);
-		transform: scale(1.1, 1.1);
+
+
 	}
 
 	& a:hover img{
 		opacity: 0.5 !important;
-		-ms-transform: scale(1.2, 1.2);
-		-webkit-transform: scale(1.2, 1.2);
-		transform: scale(1.2, 1.2);
 	}
+}
 
-	.gallery-item
-	{
+#gallery-mansory{
+	& .item{
 		margin-bottom: 30px;
+
 		@media all and(max-width: $breakpoint-mobile){
-			padding: 0;
-			margin-bottom: 0px;
+			margin-bottom: 15px;
+		}
+
+		& img{
+			width: 100%;
 		}
 	}
-	
-	
 }
 
 .visual-bar{
