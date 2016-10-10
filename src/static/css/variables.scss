@@ -10,6 +10,7 @@ $graphic-height: 50vh;
 
 // FONTS
 $font-size: 17px;
+$font-size-mobile: 15px;
 $font-1: 'Montserrat', serif;	// Headings
 $font-2: 'Raleway', serif;		// Text
 $font-logo: 'Merriweather', serif;	// Logo
@@ -23,10 +24,10 @@ $color-2: #1f2232; // Text color
 
 $alt-color-1: #1f2232; // Color of heading in grey section
 $alt-color-2: #1f2232; // Color of subheading in grey section
+$alt-color-3: #1f2232; // Color of subheading in grey section
 
-$link-color: #2d3a3a;
-
-$line-color: #eef4f4;
+$link-color: #2d3a3a; // Link color
+$line-color: #eef4f4; // Border color
 
 // FORMS
 $form-border-color: #eef4f4;

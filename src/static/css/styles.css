@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Domine:400,700|Merriweather|Dancing+Script|Raleway:300,400,500";
 @import url(bootstrap.css);
+@import url(animate.css);
 @import url(icons.css);
 #preloader {
   background-color: #fff;
@@ -66,6 +67,17 @@ body, html {
   -webkit-overflow-scrolling: touch;
   /* lets it scroll lazy */
   position: relative; }
+  @media all and (max-width: 767px) {
+    body, html {
+      font-size: 15px; } }
+
+::-moz-selection {
+  color: #fff;
+  background: #1f2232; }
+
+::selection {
+  color: #fff;
+  background: #1f2232; }
 
 a, a:active, a:focus {
   outline: none;
@@ -116,6 +128,13 @@ a {
 .text-right h2:after {
   margin: 30px 0 0 calc(100% - 50px); }
 
+.section-grey .h2 {
+  color: #1f2232; }
+  .section-grey .h2 small {
+    color: #1f2232; }
+.section-grey .h2:after {
+  background-color: #1f2232; }
+
 .section-dark .h2 {
   color: #1f2232; }
   .section-dark .h2 small {
@@ -138,7 +157,7 @@ a {
 
 .paragraph {
   font-family: "Raleway", serif;
-  line-height: 2.2;
+  line-height: 2;
   margin-bottom: 30px;
   padding: 0; }
   .paragraph a {
@@ -263,10 +282,6 @@ label.error {
   .section-grey {
     background: #eef4f4;
     color: #1f2232; }
-    .section-grey .h2 {
-      color: #1f2232 !important; }
-      .section-grey .h2 small {
-        color: #1f2232 !important; }
   .section-dark {
     background: #333333; }
   .section-line {
@@ -274,10 +289,16 @@ label.error {
 
 @media all and (max-width: 991px) {
   .column {
-    margin-bottom: 40px; } }
+    margin-bottom: 50px; } }
 
 .no-padding {
   padding: 0; }
+
+.m-b-0 {
+  margin-bottom: 0px !important; }
+
+.wow {
+  visibility: hidden; }
 
 .header {
   position: absolute;
@@ -632,6 +653,9 @@ footer {
     border-color: #2d3a3a;
     background: transparent;
     color: #2d3a3a; }
+    .button-reversed:hover {
+      background-color: #2d3a3a;
+      color: #fff; }
   .button-rounded {
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
@@ -769,9 +793,6 @@ footer {
 
 #gallery-mansory .item {
   margin-bottom: 30px; }
-  @media all and (max-width: 767px) {
-    #gallery-mansory .item {
-      margin-bottom: 15px; } }
   #gallery-mansory .item img {
     width: 100%; }
 

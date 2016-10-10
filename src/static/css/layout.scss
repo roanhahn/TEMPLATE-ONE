@@ -4,15 +4,7 @@
 
 	&-grey{
 		background: $section-grey-color;
-		color: $alt-color-1;
-
-		& .h2{
-			color: $alt-color-1 !important;
-
-			& small{
-				color: $alt-color-1 !important;
-			}
-		}
+		color: $alt-color-3;
 	}
 
 	&-dark{
@@ -26,9 +18,17 @@
 
 .column{
 	@media all and(max-width: $breakpoint-tablet){
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 	}
 }
 .no-padding{
 	padding: 0;
+}
+
+.m-b-0{
+	margin-bottom: 0px !important;
+}
+
+.wow{
+	visibility: hidden;
 }

@@ -12,7 +12,16 @@ body, html{
 	background: $section-color;
 	-webkit-overflow-scrolling: touch; /* lets it scroll lazy */
 	position: relative;
+
+	@media all and (max-width: $breakpoint-mobile){
+		font-size: $font-size-mobile;
+	}
 }
+
+
+::-moz-selection { color: #fff; background: $color-2;}
+::selection { color: #fff; background: $color-2; }
+
 
 a, a:active, a:focus{
 	outline: none;
@@ -82,13 +91,17 @@ a{
 
 .section-grey{
 
-	// .h2{
-	// 	color: $alt-color-1;
+	.h2{
+		color: $alt-color-1;
 
-	// 	& small{
-	// 		color: $alt-color-2;
-	// 	}
-	// }
+		& small{
+			color: $alt-color-2;
+		}
+	}
+
+	.h2:after{
+		background-color: $alt-color-1;
+	}
 }
 
 .section-dark{
@@ -122,7 +135,7 @@ a{
 
 .paragraph{
 	font-family: $font-2;
-	line-height: 2.2;
+	line-height: 2;
 	margin-bottom: 30px;
 	padding: 0;
 

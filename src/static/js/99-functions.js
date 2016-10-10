@@ -12,8 +12,9 @@ function cycleImages(){
 
 $(window).load(function () {
 	// Site Preloader
-	$('#preloader').delay( 2000 ).fadeOut('slow', function () {
+	$('#preloader').delay( 1000 ).fadeOut('slow', function () {
 		$(this).remove();
+		new WOW().init();
 	});
 
 	// Slideshow
@@ -106,8 +107,8 @@ $(document).ready(function() {
 			breakpoints:{
 				lg: 3, 
 				md: 4, 
-				sm: 6,
-				xs: 12
+				sm: 4,
+				xs: 6
 			},
 			distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, //default distribute by order, options => order: true/false, height: true/false, attr => 'data-order', attrOrder=> 'asc'/'desc'
 			onload: function (items) {
@@ -115,6 +116,12 @@ $(document).ready(function() {
 			} 
 		}
 	);
+
+
+	// WOW EFFECT
+
+	
+
 });
 
 $(window).resize(function(){

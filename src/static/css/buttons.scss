@@ -44,6 +44,11 @@
 		border-color: $link-color;
 		background: transparent;
 		color: $link-color;
+
+		&:hover{
+			background-color: $link-color;
+			color: #fff;
+		}
 	}
 
 	&-rounded{
