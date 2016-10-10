@@ -5461,6 +5461,14 @@ $(window).load(function () {
 
 });
 
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 400) {
+		$('.back-to-top').fadeIn('slow');
+	} else {
+		$('.back-to-top').fadeOut('slow');
+	}
+});
+
 
 
 $(document).ready(function() {
