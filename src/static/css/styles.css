@@ -313,7 +313,7 @@ label.error {
 .logo {
   float: left;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Merriweather", serif;
   margin: 25px 0;
   line-height: 1;
@@ -443,7 +443,7 @@ label.error {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   font-family: "Montserrat", serif;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
@@ -494,8 +494,7 @@ label.error {
     letter-spacing: 1px;
     font-weight: 700;
     margin-bottom: 30px;
-    text-transform: uppercase;
-    color: #1f2232; }
+    text-transform: uppercase; }
     @media all and (max-width: 767px) {
       .hero-first-line {
         font-size: 14px; } }
@@ -636,7 +635,8 @@ footer {
   border-color: #2d3a3a;
   border-style: solid;
   background: #2d3a3a;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
   .button:active, .button:focus {
     color: #fff; }
   .button:hover {
@@ -798,7 +798,7 @@ footer {
     width: 100%; }
 
 .visual-bar {
-  height: 50vh;
+  height: 40vh;
   position: relative;
   background: #1f2232 url() no-repeat center center scroll;
   background-size: cover;
@@ -814,6 +814,9 @@ footer {
     transform: translate(0, -50%);
     z-index: 10;
     font-size: 30px; }
+    @media all and (max-width: 767px) {
+      .visual-bar-inner {
+        font-size: 17px; } }
   .visual-bar-fixed {
     background-attachment: fixed; }
     @media all and (max-width: 991px) {

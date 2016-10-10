@@ -14,6 +14,8 @@ $(window).load(function () {
 	// Site Preloader
 	$('#preloader').delay( 1000 ).fadeOut('slow', function () {
 		$(this).remove();
+
+		// WOW EFFECT
 		new WOW().init();
 	});
 
@@ -124,11 +126,6 @@ $(document).ready(function() {
 			} 
 		}
 	);
-
-
-	// WOW EFFECT
-
-	
 
 });
 
