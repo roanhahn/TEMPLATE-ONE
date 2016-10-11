@@ -174,20 +174,20 @@
 }
 
 .toggle-nav{
-	// background: red;
 	background: transparent;
 	border: none;
-	position: fixed;
+	position: fixed; 
 	top: 15px;
-	right: 20px;
+	right: 15px;
 	// padding: 10px;
-	line-height: 50px;
+	line-height: 42px;
 	font-weight: normal;
 	font-size: 35px;
 	padding: 0;
+	letter-spacing: 0;
 	text-align: center;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 40px;
 	z-index: 100;
 	display: none;
 
