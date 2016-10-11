@@ -26,6 +26,7 @@
 
 .logo{
 	float: left;
+	cursor: pointer;
 	font-size: $font-logo-size;
 	font-family: $font-logo;
 	margin: 25px 0;
@@ -35,7 +36,6 @@
 
 	@media all and(max-width: $breakpoint-tablet){
 		font-size: $font-logo-size-mobile;
-		margin-top: 25px;
 	}
 	@media all and(max-width: $breakpoint-tablet){
 		// font-size: 25px;

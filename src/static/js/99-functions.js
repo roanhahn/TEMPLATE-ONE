@@ -66,6 +66,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$(".logo").click(function(){;
+		$('html, body').animate({scrollTop:0}, 1000);
+		return false;
+	});
+
+
 
 	// LAZYLOAD
 	$(".lazyload").unveil(200, function() {

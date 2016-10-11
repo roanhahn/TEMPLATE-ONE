@@ -323,6 +323,7 @@ label.error {
 
 .logo {
   float: left;
+  cursor: pointer;
   font-size: 30px;
   font-family: "Merriweather", serif;
   margin: 25px 0;
@@ -330,8 +331,7 @@ label.error {
   white-space: nowrap; }
   @media all and (max-width: 991px) {
     .logo {
-      font-size: 20px;
-      margin-top: 25px; } }
+      font-size: 20px; } }
   .logo img {
     max-width: 200px; }
 
