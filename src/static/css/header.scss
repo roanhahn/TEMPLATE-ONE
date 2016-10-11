@@ -10,24 +10,32 @@
 	color: #fff;
 	font-family: $font-1;
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+	@media all and(max-width: $breakpoint-tablet){
+		position:fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #fff;
+		width: 100%;
+		z-index: 20;
+		color: $color-1;
+		text-shadow: none;
+	}
 }
 
 .logo{
 	float: left;
-	color: #fff;
 	font-size: $font-logo-size;
 	font-family: $font-logo;
 	margin: 25px 0;
 	line-height: 1;
 	white-space: nowrap;
 
-	&:hover, &:active, &:visited, &:focus{
-		color: #fff;
-	}
 
 	@media all and(max-width: $breakpoint-tablet){
 		font-size: $font-logo-size-mobile;
-		margin-top: 30px;
+		margin-top: 25px;
 	}
 	@media all and(max-width: $breakpoint-tablet){
 		// font-size: 25px;
@@ -57,7 +65,7 @@
 
 
 .navbar{
-	
+	color: #fff;
 	float: right;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -124,6 +132,7 @@
 		right: 0;
 		bottom: 0;
 		top: 0;
+		z-index: 700;
 		background-color: rgba(0,0,0,0.95);
 		// background-color: $color-2;
 		text-align: center;
@@ -166,18 +175,20 @@
 
 .toggle-nav{
 	// background: red;
-	background: none;
+	background: transparent;
 	border: none;
-	position: absolute;
+	position: fixed;
 	top: 15px;
 	right: 20px;
 	// padding: 10px;
-	line-height: 0;
+	line-height: 50px;
 	font-weight: normal;
 	font-size: 35px;
+	padding: 0;
 	text-align: center;
 	width: 50px;
 	height: 50px;
+	z-index: 100;
 	display: none;
 
 	@media all and(max-width: $breakpoint-tablet){
@@ -201,7 +212,7 @@
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 
 	@media all and(max-width: $breakpoint-tablet){
-		background-attachment: scroll; 
+		background-attachment: scroll;
 	}
 	
 

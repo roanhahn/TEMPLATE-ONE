@@ -309,21 +309,29 @@ label.error {
   color: #fff;
   font-family: "Montserrat", serif;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+  @media all and (max-width: 991px) {
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      width: 100%;
+      z-index: 20;
+      color: #1f2232;
+      text-shadow: none; } }
 
 .logo {
   float: left;
-  color: #fff;
   font-size: 30px;
   font-family: "Merriweather", serif;
   margin: 25px 0;
   line-height: 1;
   white-space: nowrap; }
-  .logo:hover, .logo:active, .logo:visited, .logo:focus {
-    color: #fff; }
   @media all and (max-width: 991px) {
     .logo {
-      font-size: 25px;
-      margin-top: 30px; } }
+      font-size: 20px;
+      margin-top: 25px; } }
   .logo img {
     max-width: 200px; }
 
@@ -341,6 +349,7 @@ label.error {
       margin-left: 15px; } }
 
 .navbar {
+  color: #fff;
   float: right;
   font-size: 14px;
   text-transform: uppercase;
@@ -393,6 +402,7 @@ label.error {
       right: 0;
       bottom: 0;
       top: 0;
+      z-index: 700;
       background-color: rgba(0, 0, 0, 0.95);
       text-align: center;
       text-shadow: none; }
@@ -420,17 +430,19 @@ label.error {
   margin-right: 30px; }
 
 .toggle-nav {
-  background: none;
+  background: transparent;
   border: none;
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 20px;
-  line-height: 0;
+  line-height: 50px;
   font-weight: normal;
   font-size: 35px;
+  padding: 0;
   text-align: center;
   width: 50px;
   height: 50px;
+  z-index: 100;
   display: none; }
   @media all and (max-width: 991px) {
     .toggle-nav {
@@ -443,7 +455,7 @@ label.error {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Montserrat", serif;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
@@ -690,7 +702,7 @@ footer {
   position: fixed;
   display: none;
   z-index: 10;
-  bottom: 15px;
+  bottom: 10vh;
   right: 15px;
   width: 35px;
   height: 35px;

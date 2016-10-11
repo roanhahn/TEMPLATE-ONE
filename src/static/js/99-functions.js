@@ -116,7 +116,7 @@ $(document).ready(function() {
 			columnClasses: 'padding', //add classes to items
 			breakpoints:{
 				lg: 3, 
-				md: 4, 
+				md: 3, 
 				sm: 4,
 				xs: 6
 			},
