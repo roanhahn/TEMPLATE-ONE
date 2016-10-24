@@ -58,8 +58,13 @@ $(document).ready(function() {
 	// Show Mobile Nav
 	$( ".toggle-nav" ).click(function() {
 		$( ".navbar" ).fadeToggle( "fast", "linear" );
+		$.scrollLock( true );
 	});
 
+	$( ".close-nav" ).click(function() {
+		$.scrollLock( false );
+	});
+	
 	// Scroll back to top
 	$(".back-to-top").click(function(){;
 		$('html, body').animate({scrollTop:0}, 1000);
