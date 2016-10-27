@@ -5679,7 +5679,8 @@ $(document).ready(function() {
 				duration: 1000, // how fast we are animating
 				easing: 'easeInOutCubic' // the type of easing
 			}
-			);
+		);
+		$.scrollLock( false );
 		$( ".mobile-nav" ).fadeOut( "fast", "linear" );
 	});
 
@@ -5702,6 +5703,21 @@ $(document).ready(function() {
 		}
 	);
 
+
+	// Responsive preview
+	$(".preview-btn").click(function() {
+		// alert($(this).data('level'));
+		$("#preview").width( $(this).data('width'));
+		$("#preview").height( $(this).data('height'));
+		$("#preview").addClass("preview-scaled");
+		$("#preview").removeClass("preview-phone");
+	});
+	$(".preview-phone-btn").click(function() {
+		$("#preview").addClass("preview-phone");
+	});
+	
+	
+
 });
 
 $(window).resize(function(){
@@ -5714,13 +5730,6 @@ $(window).resize(function(){
 	}
 });
 
-// $(window).scroll(function(){
-// 	if ($(this).scrollTop() > 400) {
-// 		$('.back-to-top').fadeIn();
-// 	} else {
-// 		$('.back-to-top').fadeOut();
-// 	}
-// });
 
 
 

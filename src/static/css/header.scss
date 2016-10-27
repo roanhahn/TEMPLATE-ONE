@@ -151,15 +151,11 @@
 
 		& li{
 			float: none;
-			margin: 0 !important;
+			margin: 0 0 2px !important;
 
 			& a{
 				padding: 20px 0;
-				font-size: 16px;
-
-				&:hover{
-					color: $color-1;
-				}
+				font-size: 20px;
 
 				&:before{
 					display: none;

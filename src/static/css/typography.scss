@@ -251,9 +251,10 @@ hr{
 	& li{
 		list-style-type: none;
 		padding: 10px;
+		border-bottom: 1px solid rgba(23, 61, 80, 0.06);
 
-		&:nth-child(odd){
-			background-color: rgba(23, 61, 80, 0.06);
-		}
+		// &:nth-child(odd){
+		// 	background-color: rgba(23, 61, 80, 0.06);
+		// }
 	}
 }
