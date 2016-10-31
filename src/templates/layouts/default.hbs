@@ -50,7 +50,7 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body {{#if preview}} style="background-color: #212121;" {{/if}}>
 	{{> body }}
 	<!-- Our JavaScript -->
 	<script src="{{assets}}/js/app.js"></script>
