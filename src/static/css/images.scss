@@ -86,12 +86,18 @@
 
 .maps{
 	margin-bottom: 60px;
+	// height: 450px;
+	// width: 100%;
 
-	& iframe, & div{
+	& iframe{
 		pointer-events: none;
 		width: 100%;
 	}
-	
+}
+
+#map{
+	pointer-events: none;
+	width: 100%;
 }
 
 .gallery{

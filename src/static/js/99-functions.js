@@ -1,5 +1,4 @@
 // SLIDESHOW
-
 function cycleImages(){
   var $active = $('.background_cycler .active');
   var $next = ($('.background_cycler .active').next().length > 0) ? $('.background_cycler .active').next() : $('.background_cycler div:first');
@@ -10,6 +9,7 @@ function cycleImages(){
   });
 }
 
+// PRELOADER
 $(window).load(function () {
 	// Site Preloader
 	$('#preloader').delay( 1000 ).fadeOut('slow', function () {
@@ -122,7 +122,6 @@ $(document).ready(function() {
 	});
 
 	// MASONRY
-
 	$("#gallery-mansory").mpmansory(
 		{
 			childrenClass: 'item', // default is a div
