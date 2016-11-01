@@ -5578,8 +5578,7 @@ $(window).load(function () {
 	$('#preloader').delay( 1000 ).fadeOut('slow', function () {
 		$(this).remove();
 
-		// WOW EFFECT
-		new WOW().init();
+		
 	});
 
 	// Slideshow
@@ -5674,7 +5673,7 @@ $(document).ready(function() {
 		// alert($(this).data('level'));
 		
 		$('html, body').animate(
-			{scrollTop: $('.' + $(this).data('level')).offset().top},
+			{scrollTop: $('.'+ $(this).data('level')).offset().top},
 			{
 				duration: 1000, // how fast we are animating
 				easing: 'easeInOutCubic' // the type of easing
