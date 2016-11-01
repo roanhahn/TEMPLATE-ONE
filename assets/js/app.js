@@ -5562,7 +5562,6 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 // SLIDESHOW
-
 function cycleImages(){
   var $active = $('.background_cycler .active');
   var $next = ($('.background_cycler .active').next().length > 0) ? $('.background_cycler .active').next() : $('.background_cycler div:first');
@@ -5573,6 +5572,7 @@ function cycleImages(){
   });
 }
 
+// PRELOADER
 $(window).load(function () {
 	// Site Preloader
 	$('#preloader').delay( 1000 ).fadeOut('slow', function () {
@@ -5679,12 +5679,12 @@ $(document).ready(function() {
 				duration: 1000, // how fast we are animating
 				easing: 'easeInOutCubic' // the type of easing
 			}
-			);
+		);
+		$.scrollLock( false );
 		$( ".mobile-nav" ).fadeOut( "fast", "linear" );
 	});
 
 	// MASONRY
-
 	$("#gallery-mansory").mpmansory(
 		{
 			childrenClass: 'item', // default is a div
@@ -5702,6 +5702,21 @@ $(document).ready(function() {
 		}
 	);
 
+
+	// Responsive preview
+	$(".preview-btn").click(function() {
+		// alert($(this).data('level'));
+		$("#preview").width( $(this).data('width'));
+		$("#preview").height( $(this).data('height'));
+		$("#preview").addClass("preview-scaled");
+		$("#preview").removeClass("preview-phone");
+	});
+	$(".preview-phone-btn").click(function() {
+		$("#preview").addClass("preview-phone");
+	});
+	
+	
+
 });
 
 $(window).resize(function(){
@@ -5714,13 +5729,6 @@ $(window).resize(function(){
 	}
 });
 
-// $(window).scroll(function(){
-// 	if ($(this).scrollTop() > 400) {
-// 		$('.back-to-top').fadeIn();
-// 	} else {
-// 		$('.back-to-top').fadeOut();
-// 	}
-// });
 
 
 
