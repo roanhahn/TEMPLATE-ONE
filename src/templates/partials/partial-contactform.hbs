@@ -9,7 +9,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				{{> partial-map }}
 				<div class="row">
-					<form id="contact" class="" role="form">
+					<form id="contact">
 						<div class="col-sm-12">
 							<div class="successContent">
 								<i class="fa fa-check"></i>Your message has been sent successfully.
@@ -20,18 +20,22 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
+								<label for="name">Naam</label>
 								<input type="text" class="form-control" id="name" name="name" placeholder="Naam" required="required" maxlength="30">
 							</div>
 							<div class="form-group">
+								<label for="email">Email</label>
 								<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required="required" maxlength="30">
 							</div>
 							<div class="form-group">
+								<label for="subject">Onderwerp</label>
 								<input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" required="required" maxlength="50">
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<textarea class="form-control" id="message" name="message" placeholder="Bericht" value="" required="required" rows="7" maxlength="100" data-validation-required-message="Please enter a message."></textarea>
+								<label for="message">Bericht</label>
+								<textarea class="form-control" id="message" name="message" placeholder="Bericht" required="required" rows="7" maxlength="100" data-validation-required-message="Please enter a message."></textarea>
 							</div>
 						</div>
 						<div class="col-sm-12 text-center">

@@ -155,11 +155,16 @@
 		-webkit-transform: translate(0, -50%);
 		transform: translate(0, -50%);
 		z-index: 10;
-		font-size: 30px;
-		
-		@media all and(max-width: $breakpoint-mobile){
-			font-size: 17px;
+
+		& h3{
+			font-size: 30px;
+			@media all and(max-width: $breakpoint-mobile){
+				font-size: 17px;
+			}
 		}
+		
+		
+		
 	}
 
 

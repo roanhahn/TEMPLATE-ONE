@@ -841,11 +841,12 @@ footer {
     -ms-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    z-index: 10;
-    font-size: 30px; }
-    @media all and (max-width: 767px) {
-      .visual-bar-inner {
-        font-size: 17px; } }
+    z-index: 10; }
+    .visual-bar-inner h3 {
+      font-size: 30px; }
+      @media all and (max-width: 767px) {
+        .visual-bar-inner h3 {
+          font-size: 17px; } }
   .visual-bar-fixed {
     background-attachment: fixed; }
     @media all and (max-width: 991px) {
